@@ -54,6 +54,7 @@ class Party(models.Model):
         return list(filter(None, self.guest_set.values_list('email', flat=True)))
 
 
+
 MEALS = [
     ('beef', 'cow'),
     ('fish', 'fish'),

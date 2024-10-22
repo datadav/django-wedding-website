@@ -36,7 +36,7 @@ DEBUG = True
 # Set to "console" for console output of emails or to "smtp" to send real mails
 MAIL_BACKEND = "console"
 
-ALLOWED_HOSTS = ["my_website_url"]
+ALLOWED_HOSTS = ["my_website_url", "localhost"]
 CSRF_TRUSTED_ORIGINS = [
     "http://example.com",
     'https://127.0.0.1'
@@ -175,14 +175,15 @@ except ImportError:
     pass
 
 if (MAIL_BACKEND == 'console'):
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 elif (MAIL_BACKEND == 'smtp'):
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # Set email backend to use SMTP
 
 
 # the address your emails (save the dates/invites/etc.) will come from
-DEFAULT_WEDDING_FROM_EMAIL = BRIDE_AND_GROOM + ' <' + DEFAULT_WEDDING_EMAIL + '>' # change to 'address@domain.tld'
+DEFAULT_WEDDING_FROM_EMAIL = "davidjacob.cohen55@gmail.com"
 # when sending test emails it will use this address
 DEFAULT_WEDDING_TEST_EMAIL = DEFAULT_WEDDING_FROM_EMAIL
 # the default reply-to of your emails, change, if you want to have your replies somewhere else

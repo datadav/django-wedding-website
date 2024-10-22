@@ -109,17 +109,17 @@ aside {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: rgb(28,56,81);
+    color: #fff; /* Changed link color to white */
 }
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: #f05f40; /* Optional: Change color on hover to the original orange */
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: #fff!important; /* Ensure active link is also white */
     background-color: transparent;
 }
 
@@ -145,12 +145,12 @@ aside {
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(28,56,81,.7);
+        color: #fff; /* Changed link color to white */
     }
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: rgb(28,56,81);
+        color: #f05f40; /* Optional: Change hover color to the original orange */
     }
 
     .navbar-default.affix {
@@ -170,14 +170,15 @@ aside {
 
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
-        color: rgb(28,56,81);
+        color: #fff; /* Ensure affixed nav links are white */
     }
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+        color: #f05f40; /* Optional: Change hover color to the original orange */
     }
 }
+
 
 header {
     position: relative;
@@ -193,13 +194,17 @@ header {
 }
 
 #main-header {
-    background-image: url('../images/wedding-selfie-better.jpg');
+    background-image: url('../images/edendavid.jpeg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 25vh; /* Further reduced height to 25% of the viewport height */
 }
 
 header .header-content {
     position: relative;
     width: 100%;
-    padding: 100px 15px;
+    padding: 20px 15px; /* Further reduced padding */
     text-align: center;
 }
 
@@ -209,6 +214,16 @@ header .header-content .header-content-inner h1 {
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
+    top: 50%; /* Adjust this value to move the text down or up */
+    transform: translateY(+400%);
+}
+header .header-content .header-content-inner h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #fff;
+    top: 50%; /* Adjust this value to move the text down or up */
+    transform: translateY(+800%);
 }
 
 header .header-content .header-content-inner hr {
