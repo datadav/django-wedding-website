@@ -8,6 +8,10 @@ class LanguageRouterMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
+        # Exclude static and media files from redirection
+        if request.path.startswith(settings.STATIC_URL) or request.path.startswith(settings.MEDIA_URL):
+            return self.get_response(request)
+
         if request.path.startswith('/en') or request.path.startswith('/fr'):
             # Language already in URL, no need to redirect
             return self.get_response(request)
