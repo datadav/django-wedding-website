@@ -181,7 +181,7 @@ WEDDING_LOCATION = 'North Pole, USA'
 WEDDING_WEBSITE_URL = 'https://thehappycouple.com'
 # base address for all emails
 DEFAULT_WEDDING_EMAIL = 'happilyeverafter@example.com'
-WEDDING_CC_LIST = [] 
+WEDDING_CC_LIST = []
 
 # Checks, if the 'localsettings.py' is present and set some couple variables
 # which are used in a few places.
