@@ -5,18 +5,20 @@ from django.utils import translation
 
 import os
 
+
 def print_directory_contents(path):
     for root, dirs, files in os.walk(path):
         # Print the current directory path
+        if "static_root" not in root:
+            continue
         print(f"Directory: {root}")
-        
+
         # Print all subdirectories in the current directory
         for dir_name in dirs:
             print(f"  Subdirectory: {dir_name}")
 
         # Print all files in the current directory
         for file_name in files:
-            continue
             print(f"  File: {file_name}")
 
 
