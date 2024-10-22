@@ -13,14 +13,12 @@ def print_directory_contents(path):
         # Print all subdirectories in the current directory
         for dir_name in dirs:
             print(f"  Subdirectory: {dir_name}")
-        
+
         # Print all files in the current directory
         for file_name in files:
+            continue
             print(f"  File: {file_name}")
 
-# Get the current working directory
-
-# Print the contents of the current directory
 
 class LanguageRouterMiddleware:
     def __init__(self, get_response):
