@@ -526,3 +526,9 @@ body {
     background-color: #222;
     padding-bottom: 30px;
 }
+
+.navbar-nav > li > a.nav-link {
+    text-transform: uppercase; /* Make text uppercase */
+    font-size: 28px; /* Increase font size */
+    /* Add any additional styling you need */
+}

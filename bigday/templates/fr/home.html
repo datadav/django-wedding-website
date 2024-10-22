@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "fr/base.html" %}
 {% load static %}
 {% block page_head %}
     <!-- Custom CSS -->
@@ -25,11 +25,16 @@
         <!-- ... -->
     </header>
     <section class="bg-info" id="welcome">
-        <!-- ... -->
+        <!-- Countdown Timer -->
+        <div id="countdown" class="text-center">
+            <h2>Compte à rebours jusqu'au mariage</h2>
+            <p id="timer"></p>
+        </div>
     </section>
     <section class="no-padding" id="navigation">
         <!-- ... -->
     </section>
-    {% include 'partials/event.html' %}
+    <!-- Link to the new informations page -->
+    <a href="{% url 'informations' %}">Informations</a>
 {% endblock %}
 {% endblock %}
