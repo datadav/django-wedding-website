@@ -10,7 +10,7 @@
     <!-- Modified from https://github.com/IronSummitMedia/startbootstrap-creative -->
     <title>{{ couple_name }}'s big day</title>
 
-    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'bootstrap-3.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -30,7 +30,6 @@
 </head>
 <body id="page-top">
 {% block page_content %}{% endblock %}
-{% include "partials/footer.html"  %}
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
