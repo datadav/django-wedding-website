@@ -28,7 +28,8 @@ class LanguageRouterMiddleware:
     def __call__(self, request):
         # Exclude static and media files from redirection
         current_directory = os.getcwd()
-        print_directory_contents(current_directory)
+        # print_directory_contents(current_directory)
+        print_directory_contents("/app/static")
         print("request.path", request.path)
         print(os.listdir())
         if request.path.startswith("/app/static"):
