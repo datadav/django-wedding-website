@@ -32,12 +32,13 @@ class LanguageRouterMiddleware:
         # print_directory_contents(current_directory)
         print("request.path", request.path)
         print(os.listdir())
-        if request.path.startswith(settings.STATIC_URL):
+        if request.path.startswith("/app/static"):
             return self.get_response(request)
 
         if request.path.startswith('/en') or request.path.startswith('/fr'):
             # Language already in URL, no need to redirect
             return self.get_response(request)
+        
 
         # Get language from the session or browser
         language = request.session.get('django_language', request.LANGUAGE_CODE)
