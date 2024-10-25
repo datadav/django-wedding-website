@@ -9,17 +9,15 @@ import os
 def print_directory_contents(path):
     for root, dirs, files in os.walk(path):
         # Print the current directory path
-        if "static_root" not in root:
-            continue
         print(f"Directory: {root}")
 
         # Print all subdirectories in the current directory
-        for dir_name in dirs:
-            print(f"  Subdirectory: {dir_name}")
+        # for dir_name in dirs:
+        #     print(f"  Subdirectory: {dir_name}")
 
-        # Print all files in the current directory
-        for file_name in files:
-            print(f"  File: {file_name}")
+        # # Print all files in the current directory
+        # for file_name in files:
+        #     print(f"  File: {file_name}")
 
 
 class LanguageRouterMiddleware:
@@ -28,8 +26,8 @@ class LanguageRouterMiddleware:
 
     def __call__(self, request):
         # Exclude static and media files from redirection
-        # current_directory = os.getcwd()
-        # print_directory_contents(current_directory)
+        current_directory = os.getcwd()
+        print_directory_contents(current_directory)
         print("request.path", request.path)
         print(os.listdir())
         if request.path.startswith("/app/static"):
