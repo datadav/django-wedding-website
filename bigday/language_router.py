@@ -10,14 +10,8 @@ def print_directory_contents(path):
     if "/app/static" not in path:
         return
     for root, dirs, files in os.walk(path):
-        print(f"Directory: {root}")
-
-        for dir_name in dirs:
-            print(f"  Subdirectory: {dir_name}")
-
-        # Print all files in the current directory
         for file_name in files:
-            print(f"  File: {file_name}")
+            print(f"  File: {root}/{file_name}")
 
 
 class LanguageRouterMiddleware:
@@ -30,7 +24,8 @@ class LanguageRouterMiddleware:
         # print_directory_contents(current_directory)
         print_directory_contents("/app/static")
         print("request.path", request.path)
-        print(os.listdir())
+        print("is exists", os.path.exists("/app/static/bigday/js/footer.js"))
+        print(os.listdir("/app/static"))
         if request.path.startswith("/app/static"):
             return self.get_response(request)
 
