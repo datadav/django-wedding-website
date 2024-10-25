@@ -7,6 +7,7 @@ import os
 
 
 def print_directory_contents(path):
+    print("path", path)
     for root, dirs, files in os.walk(path):
         # Print the current directory path
         print(f"Directory: {root}")
